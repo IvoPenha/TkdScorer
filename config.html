@@ -8,6 +8,7 @@
     <link rel="shortcut icon" href="./favicon_io/favicon.ico">
     <link rel="stylesheet" href="tkdscorer.css">
     <script src="timer.js"></script>
+    <script src="save.js"></script>
     <style>
         #settings{
             display: inline-flex;
@@ -23,7 +24,6 @@
         }
         h2{
         text-align: left;
-            
         }
         a img{
             width: 3%;
@@ -37,6 +37,11 @@
             transform: scale(2);
             display: inline-flex;
         }
+        button{
+           height: 0.1%;
+           text-align: center;
+           background-color: #E0B514;
+        }
     </style>
 </head>
 <body>
@@ -48,7 +53,9 @@
     </header>
     <div id="settings">
     <div id="tempo">
-        <h2 style=>Duração round</h2>
+        <h2 style=>Duração round
+            
+        </h2>
         <select name="time" id="time" style="padding: 1%;">
         
             <option value="1"> 1:00</option>
@@ -57,14 +64,16 @@
             <option value="2:30"> 2:30</option>
             <option value="3:00">3:00 </option>
             <option value="5:00">5:00 </option>
+            
         </select>
-
+        <button id="saveTime" onclick="save(Time)">salvar</button>
         <h2>Numero de rounds</h2>
         <select name="numRounds" id="numRounds" style="padding: 1%;">
         <option value="1"> 1</option>
         <option value="2"> 2</option>
         <option value="3"> 3</option>
         </select>
+        <button id="saveNumRounds">salvar</button>
         
         
         <h2>Descanso entre rounds</h2>
@@ -73,10 +82,13 @@
         <option value="2"> 2</option>
         <option value="3"> 3</option>
         </select>
+        <button id="saveRest">salvar</button>
     </div>   
     <div id="win">
-        <h2>Derrota por maximo de Faltas(10) <input type="checkbox"></h2>
-        <h2>Vitoria por diferença de pontos(20) <input type="checkbox"></h2>
+        <div>
+        <h2>Derrota por maximo de Faltas(10) <input type="checkbox"> <button id="saveFalta">salvar</button> </h2>
+        </div>
+        <h2> Vitoria por diferença de pontos(20) <input type="checkbox"> <button id="saveWin">salvar</button></h2>
     </div> 
  
 </body>

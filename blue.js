@@ -7,6 +7,7 @@
 
  
  function twoPtBlue(){
+    
     blue = blue+2;
     document.getElementById('bluescore').innerHTML = blue;    
  }
